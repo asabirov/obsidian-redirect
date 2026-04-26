@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/open/:file*", "destination": "/api/open?file=:file*" }
+  ]
+}

@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-  const { vault = 'personal-finance', file } = req.query;
+  const { vault = 'vault', file } = req.query;
   if (!file) return res.status(400).send('Missing file');
   const obsidianUrl = `obsidian://open?vault=${encodeURIComponent(vault)}&file=${encodeURIComponent(file)}`;
   res.setHeader('Content-Type', 'text/html');
